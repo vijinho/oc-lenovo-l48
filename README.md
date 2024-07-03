@@ -22,12 +22,24 @@ Running Sonoma 14.5 presently, but also worked with Monterey and Ventura previou
 - In-built Ethernet
 - Sleep (needs `sudo pmset -a standby 0` to prevent trackpad failing after wake)
 - Heat sensors for CPU, RAM, DISK
+- Keyboard Backlight (requires YogaSMCPane installed, see blow)
 
 ## Not Working/Untested
 - HDMI Output untested
 - Smart Card Reader
 
-# Kexts
+# Installing YogaSMCPane
+
+This is required for the keyboard backlight to work and is obtained from [YogaSMC](https://github.com/zhen-zen/YogaSMC)
+
+1. In Finder, copy YogaSMCPane.prefPane to /Library/PreferencePanes
+2. Copy YogaSMCNC.app to /Applications
+3. Open System Settings/Security
+4. Start YogaSMCNC.app and choose 'Open Anyway' from Security in System Settings
+5. In the Menu Toolbar for the app, choose 'Preferences' and repeat 'Open Anyway' as in the previous step.
+6. You should see 'YogaSMCPane' in System Preferences now
+
+# Kexts Used 
 - [Lilu](https://github.com/acidanthera/Lilu)
 - [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
 - [Intel Bluetooth IntelBTPatcher.kext and IntelBluetoothFirmware.kext from](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
