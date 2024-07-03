@@ -25,8 +25,8 @@ Running Sonoma 14.5 presently, but also worked with Monterey and Ventura previou
 - Keyboard Backlight (requires YogaSMCPane installed, see blow)
 
 ## Not Working/Untested
-- HDMI Output untested
-- Smart Card Reader
+- HDMI Output (untested)
+- BayHub Tech Integrated Smart Card Reader not working
 
 # Installing YogaSMCPane
 
@@ -40,21 +40,28 @@ This is required for the keyboard backlight to work and is obtained from [YogaSM
 6. You should see 'YogaSMCPane' in System Preferences now
 
 # Kexts Used 
-- [Lilu](https://github.com/acidanthera/Lilu)
-- [VirtualSMC](https://github.com/acidanthera/VirtualSMC)
-- [Intel Bluetooth IntelBTPatcher.kext and IntelBluetoothFirmware.kext from](https://github.com/OpenIntelWireless/IntelBluetoothFirmware)
-- [BlueToolFixup.kext from acidanthera/BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM)
-- [IntelMausi](https://github.com/acidanthera/IntelMausi)
-- [NVMEFix](https://github.com/acidanthera/NVMeFix)
-- [RTCMemoryFixup](https://github.com/acidanthera/RTCMemoryFixup)
-- [USBToolBox](https://github.com/USBToolBox/kext)
-- [WhateverGreen](https://github.com/acidanthera/WhateverGreen)
-- [AppleALC](https://github.com/acidanthera/AppleALC)
-- [ECEnabler](https://github.com/1Revenger1/ECEnabler)
-- [HibernationFixUp](https://github.com/acidanthera/HibernationFixup)
-- [YogaSMC](https://github.com/zhen-zen/YogaSMC)
-- [itwlm]() OR [AirportItwlm]() (alternative)
-- [VoodooSMBUS](https://github.com/VoodooSMBus/VoodooSMBus)
-- [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C)
-- [VoodooPS2](https://github.com/acidanthera/VoodooPS2)
-- [BrightnessKeys](https://github.com/acidanthera/BrightnessKeys)
+
+## [Acidanthera (OpenCore Project)](https://github.com/acidanthera) 
+
+- [Lilu](https://github.com/acidanthera/Lilu) (Mandatory)
+- [VirtualSMC](https://github.com/acidanthera/VirtualSMC) (Required emulate Apple SMC)
+- [WhateverGreen](https://github.com/acidanthera/WhateverGreen) (Required for the GPU except if using a non-Intel AMD APU)
+- [AppleALC](https://github.com/acidanthera/AppleALC) - for in-built audio
+- [NVMEFix](https://github.com/acidanthera/NVMeFix) - (optional for fixing NVME issues)
+
+## Wireless/Networking
+
+- [Intel Bluetooth IntelBTPatcher.kext and IntelBluetoothFirmware.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) with BlueToolFixup.kext from [acidanthera/BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM) - after IntelBTPatcher.kext and before IntelBluetoothFirmware.kext
+- [AirportItwlm (use in-built WiFi) or itwlm](https://github.com/OpenIntelWireless/itlwm) with [https://github.com/OpenIntelWireless/HeliPort](HeliPort App) (more stable) 
+- [IntelMausi](https://github.com/acidanthera/IntelMausi) - Wired Intel Ethernet
+
+## Other 
+- [RTCMemoryFixup](https://github.com/acidanthera/RTCMemoryFixup) - CMOS emulation
+- [HibernationFixUp](https://github.com/acidanthera/HibernationFixup) - RTC variables sync with NVRAM
+- [ECEnabler](https://github.com/1Revenger1/ECEnabler) - Embedded Controller for battery status
+- [USBToolBox](https://github.com/USBToolBox/kext) - for mapping USB ports
+- [YogaSMC](https://github.com/zhen-zen/YogaSMC) - sensors for various hardware and controls for backlit keyboard
+- [VoodooI2C](https://github.com/VoodooI2C/VoodooI2C) -  I2C bus device support
+- [VoodooPS2](https://github.com/acidanthera/VoodooPS2) - Keyboard, Mouse, Touchpad with gesture support
+- [VoodooSMBUS](https://github.com/VoodooSMBus/VoodooSMBus) - ELAN Touchpad support
+- [BrightnessKeys](https://github.com/acidanthera/BrightnessKeys) - Brightness Keys
