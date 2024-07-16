@@ -22,12 +22,12 @@ Running Sonoma 14.5 presently, but also worked with Monterey and Ventura previou
 - Internal 2280 NVME and 2240 NVME plugged into WAN port.
 - Wifi/Bluetooth (was Intel 9265 NGW, now using AX210 NGW - no configuration changes necessary for either)
 - In-built Ethernet
-- Sleep (needs `sudo pmset -a standby 0` to prevent trackpad failing after wake)
 - Heat sensors for CPU, RAM, DISK
 - Keyboard Backlight (requires YogaSMCPane installed, see blow)
 
 ## Not Working/Untested
 
+- Sleep (needs `sudo pmset -a standby 0` to prevent trackpad failure after wake but often still doesn't work with extreme unresponsivness/slugishness)
 - HDMI Output (untested)
 - BayHub Tech Integrated Smart Card Reader not working
 
