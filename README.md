@@ -2,7 +2,7 @@
 
 This cheaply bought laptop beats the hell out of my Macbook 2016 (A1708) except for the screen quality/resolution and the poorer sound output, and lack of aluminium unibody. However the legendary Thinkpad keyboard is light-years ahead, and the nipple too is useful.  These laptops are going cheap, as is the later L580 which is more-or-less identical, so I'd recommend them, definitely. Thanks to everyone involved in OpenCore, the coders, the kext builders, and those who share their setups to help others.
 
-Running Sonoma 14.5 presently, but also worked with Monterey and Ventura previously. The config.plist needs an SMBIOS of MacBookPro 15.
+Running Sonoma 14.5 presently, but also worked with Monterey and Ventura previously. The config.plist needs an SMBIOS of *MacBookPro15,2*
 
 ## Hardware
 
@@ -27,7 +27,7 @@ Running Sonoma 14.5 presently, but also worked with Monterey and Ventura previou
 
 ## Not Working/Untested
 
-- Sleep (needs `sudo pmset -a standby 0` to prevent trackpad failure after wake but often still doesn't work with extreme unresponsivness/slugishness)
+- Sleep (needs `sudo pmset -a standby 0` to prevent trackpad failure after wake but often still doesn't work with extreme unresponsivness/slugishness) so still unresolved, although sleep/wake cycle works well-enough.
 - HDMI Output (untested)
 - BayHub Tech Integrated Smart Card Reader not working
 
@@ -52,13 +52,11 @@ This is required for the keyboard backlight to work and is obtained from [YogaSM
 - [RestrictEvents](https://github.com/acidanthera/RestrictEvents) - block unwanted processes causing compatibility issues
 - [AppleALC](https://github.com/acidanthera/AppleALC) - for in-built audio
 - [NVMEFix](https://github.com/acidanthera/NVMeFix) - (optional for fixing NVME issues)
-  
-  
 
 ## Wireless/Networking
 
 - [Intel Bluetooth IntelBTPatcher.kext and IntelBluetoothFirmware.kext](https://github.com/OpenIntelWireless/IntelBluetoothFirmware) with BlueToolFixup.kext from [acidanthera/BrcmPatchRAM](https://github.com/acidanthera/BrcmPatchRAM) - after IntelBTPatcher.kext and before IntelBluetoothFirmware.kext
-- [AirportItwlm (use in-built WiFi) or itwlm](https://github.com/OpenIntelWireless/itlwm) with [https://github.com/OpenIntelWireless/HeliPort](HeliPort App) (more stable) 
+- [AirportItwlm (use in-built MacOS WiFi settings) or itwlm](https://github.com/OpenIntelWireless/itlwm) with [https://github.com/OpenIntelWireless/HeliPort](HeliPort App) 
 - [IntelMausi](https://github.com/acidanthera/IntelMausi) - Wired Intel Ethernet
 
 ## Other
