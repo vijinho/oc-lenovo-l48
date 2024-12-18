@@ -1,5 +1,7 @@
 # Lenovo L480 OpenCore
 
+**NOTE**: I no longer own this motherboard, so I will only update if provided with patches/updates.
+
 This cheaply bought laptop beats the hell out of my Macbook 2016 (A1708) except for the screen quality/resolution and the poorer sound output, and lack of aluminium unibody. However the legendary Thinkpad keyboard is light-years ahead, and the nipple too is useful.  These laptops are going cheap, as is the later L580 which is more-or-less identical, so I'd recommend them, definitely. Thanks to everyone involved in OpenCore, the coders, the kext builders, and those who share their setups to help others.
 
 Running Sonoma 14.5 presently, but also worked with Monterey and Ventura previously. The config.plist needs an SMBIOS of *MacBookPro15,2*
